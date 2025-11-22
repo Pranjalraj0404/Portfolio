@@ -9,32 +9,27 @@ Showcases projects, skills, journey, and includes a live **AI assistant**, Supab
 ## 🔗 Live Demo
 
 👉 **Hosted on Vercel:**  
-https://your-vercel-url-here.vercel.app  
 
-(Replace with your actual deployment link.)
+https://portfolio-pranjalraj.vercel.app/
 
----
+
 
 ## 🖼️ Screenshots
 
-> Your screenshots are stored in the `public/` folder.
+Your screenshots are stored in the `public/` folder.
 
-### 🔹 Hero Section  
+### 🔹 Hero Section
 ![Hero Section](./public/Hero%20Section.png)
 
-### 🔹 Featured Projects  
-![Featured Projects](./public/Featured%20Projects.png)
+### 🔹 Featured Projects
+![Featured Projects](./public/Featured_Projects%20.png)
 
-### 🔹 Contact Modal  
-![Contact Modal](./public/Contact%20Modal%20.png)
+### 🔹 Contact Modal
+![Contact Modal](./public/Contact%20Modal%20%20.png)
 
-### 🔹 AI Chatbot  
-![AI Chatbot](./public/AI%20Chatbot%20.png)
+### 🔹 AI Chatbot
+![AI Chatbot](./public/AI%20Chatbot%20%20.png)
 
-> 💡 Tip: if you later rename them to simpler names like `hero-section.png`,  
-> just update the paths here, e.g. `./public/hero-section.png`.
-
----
 
 ## ✨ Features
 
