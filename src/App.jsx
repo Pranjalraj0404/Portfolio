@@ -790,16 +790,18 @@ const ContactModal = ({ isOpen, onClose }) => {
 
     try {
       await window.emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_YOUR_TEMPLATE_ID,
-        templateParams
-      );
+  EMAILJS_SERVICE_ID,
+  EMAILJS_YOUR_TEMPLATE_ID,
+  templateParams,
+  EMAILJS_PUBLIC_KEY
+);
 
-      await window.emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_AUTOREPLY_TEMPLATE_ID,
-        templateParams
-      );
+await window.emailjs.send(
+  EMAILJS_SERVICE_ID,
+  EMAILJS_AUTOREPLY_TEMPLATE_ID,
+  templateParams,
+  EMAILJS_PUBLIC_KEY
+);
 
       setStatus("success");
       setTimeout(() => {
