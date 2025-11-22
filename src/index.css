@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This block ensures a dark background and prevents white flashes on load */
+body {
+  background-color: #03030c;
+  color: white;
+  min-height: 100vh;
+}
