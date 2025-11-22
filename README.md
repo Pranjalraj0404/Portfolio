@@ -91,13 +91,14 @@ my-portfolio/
 ├── vite.config.js
 ├── tailwind.config.js
 └── postcss.config.js
-
+```
 
 
 ⚙️ Environment Variables
 
 Create a .env file in the project root:
 
+``` bash
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
@@ -107,8 +108,10 @@ VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID=your_autoreply_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 
 VITE_GEMINI_API_KEY=your_gemini_api_key
+```
 
-Important
+
+**Important**
 
 All keys must start with VITE_ (Vite requirement).
 
@@ -118,35 +121,43 @@ Add the same keys in Vercel → Project → Settings → Environment Variables.
 
 🚀 Running Locally
 1️⃣ Clone the repo
+```bash
 git clone https://github.com/Pranjalraj0404/Portfolio.git
 cd Portfolio
+```
 
 2️⃣ Install dependencies
+```bash
 npm install
+```
 
 3️⃣ Setup .env
-
+```bash
 Create .env with the values shown above.
+```
 
 4️⃣ Start dev server
+```bash
 npm run dev
-
+```
 
 Open: http://localhost:5173
 
 5️⃣ Build & preview production build
+```bash
 npm run build
 npm run preview
 
 
 Preview: usually http://localhost:4173
+```
 
 🌐 Deploying to Vercel
 
 Push to GitHub (steps below).
 
 On Vercel Dashboard:
-
+```bash
 Import Portfolio repo from GitHub
 
 Framework preset: Vite
@@ -160,11 +171,11 @@ Add all environment variables
 Click Deploy 🚀
 
 Every push to main will auto-redeploy.
-
+```
 🧾 Git & GitHub Workflow
 
 From inside your project folder (D:\Projects\gemin\my-portfolio):
-
+```bash
 First time (already done, but for reference)
 git init
 git branch -M main
@@ -172,11 +183,13 @@ git remote add origin https://github.com/Pranjalraj0404/Portfolio.git
 git add .
 git commit -m "Initial commit"
 git push -u origin main
+```
 
 Next updates (like this README + screenshots)
 
 Whenever you change files (README, images, code):
 
+```bash
 # 1. See what changed
 git status
 
@@ -188,7 +201,7 @@ git commit -m "Add README and screenshots"
 
 # 4. Push to GitHub
 git push
-
+```
 
 That’s it – Vercel will pick up the push and redeploy automatically.
 
