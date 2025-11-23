@@ -109,7 +109,7 @@ const PROJECTS = [
       "Storing and organizing interview history securely and efficiently.",
     ],
        link: "https://interview-prep-ai0404.vercel.app/",
-    github: "https://github.com/Pranjalraj0404/AI-Resume",
+    github: "https://github.com/Pranjalraj0404/Interview-prep-ai",
   },
   {
     id: 2,
