@@ -108,7 +108,7 @@ const PROJECTS = [
       "Designing prompts that adapt to different roles and tech stacks.",
       "Storing and organizing interview history securely and efficiently.",
     ],
-    link: "#", // put your live demo URL here if you deploy it
+       link: "https://interview-prep-ai0404.vercel.app/",
     github: "https://github.com/Pranjalraj0404/AI-Resume",
   },
   {
@@ -133,21 +133,7 @@ const PROJECTS = [
 
 
 const UPCOMING_PROJECTS = [
-  {
-    title: "Real-time Stock Visualizer",
-    tech: ["Python", "Flask", "d3.js"],
-    desc: "Building a system to fetch and visualize live stock data using d3.js for dynamic charts and a Python backend for API scraping.",
-  },
-  {
-    title: "Personal Portfolio V2",
-    tech: ["Gatsby/Astro", "GraphQL", "Serverless Functions"],
-    desc: "Planning a complete redesign focusing on extreme performance (Lighthouse scores of 100) and static site generation for minimal load times.",
-  },
-  {
-    title: "DSA Problem Generator CLI",
-    tech: ["C++", "CLI"],
-    desc: "A command-line tool written in C++ to generate custom competitive programming problems based on user-defined difficulty and topic.",
-  },
+  
 ];
 
 // --- SKILLS DATA ---
