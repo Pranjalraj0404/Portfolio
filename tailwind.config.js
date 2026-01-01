@@ -15,8 +15,19 @@ export default {
         'fade-in-up': 'fade-in-up 0.3s ease-out forwards',
         'glitch-1': 'glitch-1 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite',
         'glitch-2': 'glitch-2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite reverse',
+        'gradient-x': 'gradient-x 15s ease infinite',
       },
       keyframes: {
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },

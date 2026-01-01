@@ -12,7 +12,7 @@ Showcases projects, skills, journey, and includes a live **AI assistant**, Supab
 
 https://portfolio-pranjalraj.vercel.app/
 
-
+---
 
 ## 🖼️ Screenshots
 
@@ -33,21 +33,22 @@ Your screenshots are stored in the `public/` folder.
 
 ## ✨ Features
 
-- 🎨 Modern UI with gradients, glassmorphism, custom cursor & smooth animations  
-- 🧑‍💻 Hero section with glitch effect + typewriter text  
-- 🧰 Tech stack grouped into categories (Languages, Frontend, Backend, Tools)  
-- 💼 Featured projects with:
-  - Tech badges  
-  - Challenges & solutions  
-  - AI “Explain Like I’m 5” using **Gemini API**  
-- 📂 Supabase Storage for profile image & resume  
-- 📬 Contact Modal with **EmailJS**:
-  - Sends message to your inbox  
-  - Sends auto-reply to the user  
-- 🤖 “Pranjal AI” chat widget for portfolio Q&A  
-- 📱 Fully responsive layout  
-- ⚡ Vite-based dev environment (fast HMR)  
-- 🚀 Deployed on Vercel with CI/CD from GitHub  
+- 🎨 **Modern Glassmorphism UI**: High-end visuals with gradients, backdrop blur, custom cursor, and smooth scroll animations.
+- 🧑‍💻 **Interactive Hero Section**: Features glitch text effects, typewriter animations, and a dynamic layout.
+- 🧰 **Categorized Tech Stack**: Visual breakdown of skills (Languages, Frontend, Backend, Tools) with hover effects.
+- 💼 **Project Showcase**:
+  - Detailed project cards with tech badges.
+  - **AI "Explain Like I'm 5"**: Uses Google Gemini API to simplify technical descriptions instantly.
+  - Direct links to GitHub and Live Demos.
+- 📂 **Supabase Storage**: Efficiently hosts profile images and resume files.
+- 📬 **Smart Contact System**:
+  - Powered by EmailJS.
+  - Sends inquiries directly to your inbox.
+  - Auto-replies to senders with a confirmation message.
+- 🤖 **"Pranjal AI" Chatbot**: A custom-trained AI assistant that answers questions about the portfolio owner's skills and background.
+- 📱 **Fully Responsive**: Optimized for all devices, from mobile phones to large desktop screens.
+- ⚡ **High Performance**: Built with Vite for lightning-fast loading and HMR.
+- 🚀 **CI/CD Deployment**: Automated deployments to Vercel via GitHub.
 
 ---
 
@@ -60,31 +61,42 @@ Your screenshots are stored in the `public/` folder.
 - Lucide Icons  
 
 **Services**  
-- Supabase (storage)  
-- EmailJS  
-- Google Gemini API  
+- Supabase (Storage)  
+- EmailJS (Contact Form)  
+- Google Gemini API (AI Features)  
 
 **Deployment**  
 - Vercel  
 
 ---
 
-## 📁 Project Structure (simplified)
+## 📁 Project Structure
+
+The project follows a modular architecture for better maintainability and scalability:
 
 ```bash
 my-portfolio/
-├── public/
+├── public/                 # Static assets (images, icons)
 │   ├── Hero Section.png
 │   ├── Featured Projects.png
 │   ├── Contact Modal .png
 │   ├── AI Chatbot .png
 │   └── vite.svg
 ├── src/
-│   ├── assets/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
+│   ├── assets/             # Component-specific assets
+│   ├── components/         # Reusable UI components
+│   │   ├── layout/         # Structural components (Navbar, Footer)
+│   │   ├── modals/         # Popup modals (Project, Contact)
+│   │   ├── sections/       # Page sections (Hero, About, Projects, etc.)
+│   │   ├── ui/             # Generic UI elements (Buttons, Cards, Loaders)
+│   │   └── widgets/        # Standalone widgets (AIChatWidget)
+│   ├── data/               # Static data files (portfolioData.jsx)
+│   ├── hooks/              # Custom React hooks (useScrollReveal, etc.)
+│   ├── utils/              # Utility functions & config (API, constants)
+│   ├── App.jsx             # Main application component
+│   ├── App.css             # Global styles
+│   ├── index.css           # Tailwind & base styles
+│   └── main.jsx            # Entry point
 ├── .gitignore
 ├── index.html
 ├── package.json
