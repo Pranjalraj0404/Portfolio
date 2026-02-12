@@ -51,7 +51,7 @@ export const PROJECTS = [
     id: 1,
     title: "AI Resume / Interview Prep AI",
     image:
-      "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
     tech: ["Next.js", "Gemini API", "MongoDB", "Tailwind"],
     description:
       "AI-based interview platform generating adaptive questions for mock interviews. Reduces prep time using generative AI models.",
@@ -82,6 +82,24 @@ export const PROJECTS = [
     ],
     link: "#", // put live demo URL here if you host the API/UI
     github: "https://github.com/Pranjalraj0404/TaskLink",
+  },
+  {
+    id: 3,
+    title: "EquiSplit",
+    image:
+      "https://github.com/Pranjalraj0404/EquiSplit/blob/main/Screenshots/dashboard.png",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    description:
+      "Intelligent Group Expense Tracker - seamless expense splitting, automated debt settlement, and interactive analytics dashboard.",
+    longDescription:
+      "A production-ready MERN stack application for managing shared expenses. SplitApp enables users to create groups, log expenses, compute balances automatically, and visualize spending patterns through interactive dashboards. Features include JWT authentication, real-time balance tracking, and optimized MongoDB queries for analytics.",
+    challenges: [
+      "Implementing automated equal splitting logic across multiple users and transactions.",
+      "Optimizing MongoDB aggregation pipelines for efficient expense analytics.",
+      "Building a responsive Material UI dashboard with Chart.js visualizations for real-time balance updates.",
+    ],
+    link: "https://equisplit-pranjal.vercel.app/",
+    github: "https://github.com/Pranjalraj0404/EquiSplit",
   },
 ];
 
