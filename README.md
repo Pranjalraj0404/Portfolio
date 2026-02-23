@@ -22,13 +22,13 @@ Your screenshots are stored in the `public/` folder.
 ![Hero Section](./public/Hero%20Section.png)
 
 ### 🔹 Featured Projects
-![Featured Projects](./public/Featured_Projects%20.png)
+![Featured Projects](./public/Screenshot%202026-02-23%20182211%20.png)
 
 ### 🔹 Contact Modal
 ![Contact Modal](./public/Contact%20Modal%20%20.png)
 
 ### 🔹 AI Chatbot
-![AI Chatbot](./public/AI%20Chatbot%20%20.png)
+![AI Chatbot](./public/Screenshot%202026-02-23%20182227%20%20.png)
 
 
 ## ✨ Features
