@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* This block ensures a dark background and prevents white flashes on load */
+
 body {
-  background-color: #03030c;
-  color: white;
+  /* Dark base layer so section backgrounds don't wash out */
+  background: radial-gradient(
+    130% 95% at 50% -15%,
+    rgba(56, 124, 255, 0.35) 0%,
+    rgba(17, 43, 97, 0.88) 42%,
+    rgba(2, 6, 23, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #dbeafe;
   min-height: 100vh;
 }

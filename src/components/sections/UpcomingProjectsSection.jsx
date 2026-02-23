@@ -16,7 +16,7 @@ const UpcomingProjectsSection = () => (
         <TiltCard>
           <GlassCard className="min-h-[220px] flex flex-col items-center justify-center text-center bg-[#11112b]/70">
             <div className="mb-4 flex items-center gap-3">
-              <Rocket className="text-purple-400" size={24} />
+              <Rocket className="text-blue-400" size={24} />
               <h3 className="text-2xl font-bold text-white">
                 New launches coming soon
               </h3>

@@ -30,7 +30,7 @@ const ProjectModal = ({ project, onClose }) => {
       <div className="relative bg-[#0a0a16] border border-white/10 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl animate-fade-in-up custom-scrollbar">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-purple-500/50 rounded-full text-white transition-colors z-10"
+          className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-blue-500/50 rounded-full text-white transition-colors z-10"
         >
           <X size={24} />
         </button>
@@ -41,6 +41,11 @@ const ProjectModal = ({ project, onClose }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src =
+                "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop";
+            }}
           />
           <div className="absolute bottom-6 left-6 sm:left-10 z-20">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2">
@@ -50,7 +55,7 @@ const ProjectModal = ({ project, onClose }) => {
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="px-3 py-1 text-xs font-medium bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30"
+                  className="px-3 py-1 text-xs font-medium bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30"
                 >
                   {t}
                 </span>
@@ -63,22 +68,22 @@ const ProjectModal = ({ project, onClose }) => {
           <div className="md:col-span-2 space-y-8">
             <div>
               <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                <Terminal className="text-purple-400" size={20} /> Project
+                <Terminal className="text-blue-400" size={20} /> Project
                 Overview
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 {project.longDescription}
               </p>
 
-              <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/30">
+              <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30">
                 <div className="flex justify-between items-center mb-2">
-                  <h4 className="text-sm font-bold text-purple-300 flex items-center gap-2">
+                  <h4 className="text-sm font-bold text-blue-300 flex items-center gap-2">
                     <Sparkles size={16} /> AI Simplified Explanation
                   </h4>
                   {!aiExplanation && !isGenerating && (
                     <button
                       onClick={handleExplain}
-                      className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-3 py-1.5 rounded-lg transition-colors"
+                      className="text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg transition-colors"
                     >
                       Explain Like I&apos;m 5
                     </button>
@@ -114,7 +119,7 @@ const ProjectModal = ({ project, onClose }) => {
                     key={i}
                     className="flex items-start gap-3 text-gray-400"
                   >
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0"></span>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
                     {challenge}
                   </li>
                 ))}
@@ -134,7 +139,7 @@ const ProjectModal = ({ project, onClose }) => {
                 </a>
                 <a
                   href={project.link}
-                  className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg transition-all shadow-lg shadow-purple-500/20"
+                  className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-all shadow-lg shadow-blue-500/20"
                 >
                   <ExternalLink size={18} /> Live Demo
                 </a>

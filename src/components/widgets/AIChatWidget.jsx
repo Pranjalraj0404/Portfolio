@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { X, MessageSquare, Bot, Send, Loader2 } from "lucide-react";
 import { callGeminiAPI } from "../../utils/gemini";
-import { PERSONAL_INFO } from "../../data/portfolioData";
+import { PERSONAL_INFO, PROJECTS, SKILL_CATEGORIES, EDUCATION } from "../../data/portfolioData";
 
 const AIChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +22,30 @@ const AIChatWidget = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isOpen]);
+
+  const getOfflineFallbackReply = (query) => {
+    const q = query.toLowerCase();
+    const allSkills = SKILL_CATEGORIES.flatMap((cat) => cat.skills.map((s) => s.name)).join(", ");
+
+    if (q.includes("stack") || q.includes("skills") || q.includes("tech")) {
+      return `Pranjal works mainly with ${allSkills}. Core stack: React, Node.js, Express, MongoDB, and Tailwind CSS.`;
+    }
+
+    if (q.includes("project") || q.includes("build") || q.includes("made")) {
+      const projectNames = PROJECTS.map((p) => p.title).join(", ");
+      return `Featured projects include: ${projectNames}. Ask me about any one project for details.`;
+    }
+
+    if (q.includes("education") || q.includes("study") || q.includes("college")) {
+      return `${PERSONAL_INFO.name} is pursuing B.E. in ECE at ${EDUCATION[0]?.institution} (${EDUCATION[0]?.duration}).`;
+    }
+
+    if (q.includes("contact") || q.includes("email") || q.includes("reach")) {
+      return `You can contact ${PERSONAL_INFO.name} at ${PERSONAL_INFO.email}.`;
+    }
+
+    return `${PERSONAL_INFO.name} is a ${PERSONAL_INFO.title}. Ask about skills, projects, education, or contact info.`;
+  };
 
   const handleSend = async (e) => {
     e.preventDefault();
@@ -49,8 +73,14 @@ const AIChatWidget = () => {
     `;
 
     const responseText = await callGeminiAPI(input, systemContext);
+    const isApiErrorResponse =
+      responseText === "AI assistant is currently offline." ||
+      responseText.includes("trouble connecting to my AI brain");
+    const finalResponse = isApiErrorResponse
+      ? getOfflineFallbackReply(input)
+      : responseText;
 
-    setMessages((prev) => [...prev, { type: "bot", text: responseText }]);
+    setMessages((prev) => [...prev, { type: "bot", text: finalResponse }]);
     setIsLoading(false);
   };
 
@@ -58,19 +88,19 @@ const AIChatWidget = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 left-8 p-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white rounded-full shadow-lg shadow-purple-500/30 transition-all duration-300 z-[200] hover:scale-110"
+        className="fixed bottom-8 left-8 p-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-300 z-[200] hover:scale-110"
       >
         {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
       </button>
 
       <div
-        className={`fixed bottom-24 left-8 w-80 sm:w-96 h-96 bg-[#0a0a16]/95 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl z-[200] flex flex-col transition-all duration-300 origin-bottom-left ${
+        className={`fixed bottom-24 left-8 w-80 sm:w-96 h-96 bg-[#061126]/95 backdrop-blur-md border border-blue-200/15 rounded-2xl shadow-2xl shadow-blue-900/30 z-[200] flex flex-col transition-all duration-300 origin-bottom-left ${
           isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"
         }`}
       >
-        <div className="p-4 border-b border-white/10 bg-white/5 rounded-t-2xl flex items-center gap-3">
-          <div className="p-2 bg-purple-500/20 rounded-full">
-            <Bot size={20} className="text-purple-400" />
+        <div className="p-4 border-b border-blue-200/10 bg-blue-400/5 rounded-t-2xl flex items-center gap-3">
+          <div className="p-2 bg-blue-500/20 rounded-full">
+            <Bot size={20} className="text-blue-300" />
           </div>
           <div>
             <h3 className="font-bold text-white text-sm">Pranjal AI</h3>
@@ -92,8 +122,8 @@ const AIChatWidget = () => {
               <div
                 className={`max-w-[80%] p-3 rounded-xl text-sm ${
                   msg.type === "user"
-                    ? "bg-purple-600 text-white rounded-br-none"
-                    : "bg-[#1a1a2e] text-gray-300 border border-white/5 rounded-bl-none"
+                    ? "bg-blue-600 text-white rounded-br-none"
+                    : "bg-[#0f1f3a] text-blue-100 border border-blue-200/10 rounded-bl-none"
                 }`}
               >
                 {msg.text}
@@ -102,27 +132,27 @@ const AIChatWidget = () => {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-[#1a1a2e] p-3 rounded-xl rounded-bl-none border border-white/5">
-                <Loader2 size={16} className="animate-spin text-purple-400" />
+              <div className="bg-[#0f1f3a] p-3 rounded-xl rounded-bl-none border border-blue-200/10">
+                <Loader2 size={16} className="animate-spin text-blue-300" />
               </div>
             </div>
           )}
           <div ref={messagesEndRef} />
         </div>
 
-        <form onSubmit={handleSend} className="p-3 border-t border-white/10 bg-white/5 rounded-b-2xl">
+        <form onSubmit={handleSend} className="p-3 border-t border-blue-200/10 bg-blue-400/5 rounded-b-2xl">
           <div className="flex gap-2">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about Pranjal..."
-              className="flex-grow bg-[#0a0a16] border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
+              className="flex-grow bg-[#07142b] border border-blue-200/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
             />
             <button
               type="submit"
               disabled={isLoading}
-              className="p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors disabled:opacity-50"
+              className="p-2 bg-blue-600 hover:bg-cyan-500 text-white rounded-lg transition-colors disabled:opacity-50"
             >
               <Send size={16} />
             </button>

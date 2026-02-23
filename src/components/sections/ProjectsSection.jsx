@@ -19,9 +19,9 @@ const ProjectsSection = ({ setSelectedProject }) => {
                 className="h-full cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="bg-[#0e0e1f] border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-300 group h-full flex flex-col shadow-2xl relative">
+                <div className="bg-[#0e0e1f] border border-white/5 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300 group h-full flex flex-col shadow-2xl relative">
                   <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity z-30 pointer-events-none">
-                    <span className="text-white font-bold px-4 py-2 border border-purple-500 rounded-lg bg-black/50 backdrop-blur-sm">
+                    <span className="text-white font-bold px-4 py-2 border border-blue-500 rounded-lg bg-black/50 backdrop-blur-sm">
                       View Details
                     </span>
                   </div>
@@ -32,11 +32,16 @@ const ProjectsSection = ({ setSelectedProject }) => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src =
+                          "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop";
+                      }}
                     />
                   </div>
 
                   <div className="p-8 flex-grow flex flex-col relative z-20">
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
 
@@ -48,7 +53,7 @@ const ProjectsSection = ({ setSelectedProject }) => {
                       {project.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-3 py-1 text-xs font-medium bg-[#1a1a2e] text-purple-300 rounded-full border border-purple-500/10"
+                          className="px-3 py-1 text-xs font-medium bg-[#1a1a2e] text-blue-300 rounded-full border border-blue-500/10"
                         >
                           {t}
                         </span>

@@ -16,9 +16,9 @@ const AboutMeSection = () => (
       <Reveal>
         <SectionTitle>About Me</SectionTitle>
         <div className="text-center text-gray-400 mb-12 -mt-10 flex justify-center gap-2 items-center">
-          <Sparkles size={16} className="text-purple-500" /> Transforming ideas
+          <Sparkles size={16} className="text-blue-500" /> Transforming ideas
           into digital experiences{" "}
-          <Sparkles size={16} className="text-purple-500" />
+          <Sparkles size={16} className="text-blue-500" />
         </div>
       </Reveal>
 
@@ -27,7 +27,7 @@ const AboutMeSection = () => (
           <Reveal delay={150}>
             <h2 className="text-5xl font-bold text-white mb-2">
               Hello, I'm{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
                 {PERSONAL_INFO.name}
               </span>
             </h2>
@@ -37,11 +37,11 @@ const AboutMeSection = () => (
           </Reveal>
 
           <Reveal delay={300}>
-            <div className="bg-[#1a1a2e] border border-purple-500/30 rounded-xl p-4 text-gray-300 italic text-sm shadow-xl shadow-purple-500/10 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
-              <span className="text-xl text-purple-400 pr-2">"</span>
+            <div className="bg-[#1a1a2e] border border-blue-500/30 rounded-xl p-4 text-gray-300 italic text-sm shadow-xl shadow-blue-500/10 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+              <span className="text-xl text-blue-400 pr-2">"</span>
               {PERSONAL_INFO.quote}
-              <span className="text-xl text-purple-400 pl-2">"</span>
+              <span className="text-xl text-blue-400 pl-2">"</span>
             </div>
           </Reveal>
 
@@ -51,7 +51,7 @@ const AboutMeSection = () => (
                 href={DIRECT_RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition-all flex items-center gap-2 shadow-md shadow-purple-500/30"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition-all flex items-center gap-2 shadow-md shadow-blue-500/30"
               >
                 <Download size={18} /> Download Resume
               </a>
@@ -68,7 +68,7 @@ const AboutMeSection = () => (
 
         <div className="md:col-span-1 flex justify-center md:justify-end cursor-auto order-first md:order-last">
           <Reveal delay={150}>
-            <div className="relative w-full max-w-[280px] h-[280px] rounded-full overflow-hidden bg-gradient-to-br from-purple-600/50 to-cyan-500/50 p-2 shadow-2xl shadow-purple-500/20">
+            <div className="relative w-full max-w-[280px] h-[280px] rounded-full overflow-hidden bg-gradient-to-br from-blue-600/50 to-cyan-500/50 p-2 shadow-2xl shadow-blue-500/20">
               <img
                 src={DIRECT_PROFILE_URL}
                 alt={PERSONAL_INFO.name}

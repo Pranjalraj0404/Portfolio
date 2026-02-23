@@ -22,11 +22,11 @@ const ContactSection = ({ setIsContactOpen }) => {
               <div className="flex flex-col md:flex-row justify-center gap-4 mb-10">
                 <a
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="flex items-center justify-center gap-3 px-6 py-4 bg-[#1a1a2e] border border-white/10 rounded-xl text-gray-300 hover:border-purple-500/50 hover:text-white transition-all group"
+                  className="flex items-center justify-center gap-3 px-6 py-4 bg-[#1a1a2e] border border-white/10 rounded-xl text-gray-300 hover:border-blue-500/50 hover:text-white transition-all group"
                 >
                   <Mail
                     size={20}
-                    className="text-purple-500 group-hover:text-purple-400"
+                    className="text-blue-500 group-hover:text-blue-400"
                   />
                   {PERSONAL_INFO.email}
                 </a>
@@ -35,7 +35,7 @@ const ContactSection = ({ setIsContactOpen }) => {
 
               <button
                 onClick={() => setIsContactOpen(true)}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-4 rounded-xl font-bold transition-all shadow-[0_0_30px_-5px_rgba(147,51,234,0.3)] hover:shadow-[0_0_40px_-5px_rgba(147,51,234,0.5)] hover:-translate-y-1"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 rounded-xl font-bold transition-all shadow-[0_0_30px_-5px_rgba(59,130,246,0.3)] hover:shadow-[0_0_40px_-5px_rgba(59,130,246,0.5)] hover:-translate-y-1"
               >
                 Say Hello
               </button>

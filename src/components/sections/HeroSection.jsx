@@ -41,7 +41,7 @@ const HeroSection = ({ setIsContactOpen }) => {
       className="relative z-10 pt-32 pb-20 container mx-auto px-6 min-h-screen flex flex-col justify-center items-center text-center"
     >
       <Reveal>
-        <div className="inline-block px-4 py-2 mb-6 rounded-full bg-white/5 border border-white/10 text-purple-300 text-sm font-medium tracking-wide backdrop-blur-sm">
+        <div className="inline-block px-4 py-2 mb-6 rounded-full bg-white/5 border border-white/10 text-blue-300 text-sm font-medium tracking-wide backdrop-blur-sm">
           ✨ Open to Work
         </div>
       </Reveal>
@@ -50,7 +50,7 @@ const HeroSection = ({ setIsContactOpen }) => {
         <img
           src={DIRECT_PROFILE_URL}
           alt={PERSONAL_INFO.name}
-          className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-purple-500/50 shadow-lg shadow-purple-500/30 transition-transform hover:scale-105"
+          className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500/50 shadow-lg shadow-blue-500/30 transition-transform hover:scale-105"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src = DEFAULT_IMAGE_URL;
@@ -59,7 +59,7 @@ const HeroSection = ({ setIsContactOpen }) => {
 
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
           Transforming Ideas into <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 animate-gradient-x">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-cyan-400 animate-gradient-x">
             <GlitchText text="Digital Reality" />
           </span>
         </h1>
@@ -68,7 +68,7 @@ const HeroSection = ({ setIsContactOpen }) => {
       <Reveal delay={400}>
         <div className="text-xl md:text-3xl text-gray-400 mb-10 h-8 font-mono">
           I am a{" "}
-          <span className="text-white border-r-2 border-purple-500 pr-1 animate-blink">
+          <span className="text-white border-r-2 border-blue-500 pr-1 animate-blink">
             {typedText}
           </span>
         </div>
@@ -81,7 +81,7 @@ const HeroSection = ({ setIsContactOpen }) => {
         <div className="flex flex-wrap justify-center gap-6 cursor-auto">
           <button
             onClick={() => setIsContactOpen(true)}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_-5px_rgba(147,51,234,0.5)] hover:scale-105 flex items-center gap-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:scale-105 flex items-center gap-2"
           >
             <Mail className="w-5 h-5" />
             Let&apos;s Connect
@@ -104,7 +104,7 @@ const HeroSection = ({ setIsContactOpen }) => {
             <a
               key={i}
               href={social.href}
-              className="hover:text-purple-400 transition-colors transform hover:scale-110"
+              className="hover:text-blue-400 transition-colors transform hover:scale-110"
               aria-label={social.label}
             >
               {social.icon}

@@ -28,7 +28,7 @@ const SkillsSection = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 cursor-auto">
                   {category.skills.map((skill, sIdx) => (
                     <TiltCard key={sIdx}>
-                      <div className="group bg-[#11112b]/40 border border-white/5 hover:border-purple-500/40 rounded-xl p-4 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-white/5">
+                      <div className="group bg-[#11112b]/40 border border-white/5 hover:border-blue-500/40 rounded-xl p-4 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-white/5">
                         <img
                           src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.icon}`}
                           alt={skill.name}

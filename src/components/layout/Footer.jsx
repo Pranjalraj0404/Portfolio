@@ -9,7 +9,7 @@ const Footer = ({ scrollToTop }) => {
       <div className="container mx-auto px-6">
         <button
           onClick={scrollToTop}
-          className="absolute -top-6 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#1a1a2e] border border-white/10 text-white hover:bg-purple-600 transition-all shadow-lg hover:shadow-purple-500/50"
+          className="absolute -top-6 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#1a1a2e] border border-white/10 text-white hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/50"
         >
           <ArrowUp size={20} />
         </button>

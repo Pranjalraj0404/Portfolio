@@ -12,3 +12,4 @@ export const EMAILJS_AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTORE
 export const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+export const GEMINI_MODELS = import.meta.env.VITE_GEMINI_MODELS;

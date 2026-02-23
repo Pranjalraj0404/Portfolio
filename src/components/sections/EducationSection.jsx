@@ -14,7 +14,7 @@ const EducationSection = () => {
         </Reveal>
 
         <div className="max-w-4xl mx-auto relative">
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-cyan-500 to-purple-500 opacity-30"></div>
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-cyan-400 to-blue-500 opacity-35"></div>
 
           <div className="space-y-12">
             {EDUCATION.map((edu, index) => (
@@ -24,12 +24,12 @@ const EducationSection = () => {
                     index % 2 === 0 ? "md:flex-row-reverse" : ""
                   }`}
                 >
-                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#03030c] border-2 border-purple-500 rounded-full z-10 mt-6 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#03030c] border-2 border-blue-500 rounded-full z-10 mt-6 shadow-[0_0_12px_rgba(59,130,246,0.55)]"></div>
 
                   <div className="ml-20 md:ml-0 md:w-1/2 md:px-12">
                     <TiltCard>
                       <GlassCard className="hover:-translate-y-2">
-                        <span className="text-purple-400 text-xs font-bold uppercase tracking-wider mb-2 block">
+                        <span className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-2 block">
                           {edu.duration}
                         </span>
                         <h3 className="text-xl font-bold text-white mb-1">
@@ -38,7 +38,7 @@ const EducationSection = () => {
                         <p className="text-gray-400 text-sm mb-4">
                           {edu.degree}
                         </p>
-                        <div className="inline-block px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-mono">
+                        <div className="inline-block px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-mono">
                           {edu.grade}
                         </div>
                         {edu.desc && (

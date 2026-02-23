@@ -53,10 +53,11 @@ function App() {
   };
 
   return (
-    <div className="bg-[#03030c] text-white min-h-screen cursor-none selection:bg-purple-500/30 selection:text-purple-200 overflow-x-hidden font-sans relative">
-      {/* Global Background Layers - Always present */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/40 via-[#03030c] to-[#03030c] pointer-events-none z-0"></div>
-      <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none z-0 mix-blend-overlay"></div>
+    <div className="bg-[#020617] text-white min-h-screen cursor-none selection:bg-blue-400/25 selection:text-blue-100 overflow-x-hidden font-sans relative">
+      {/* Global Background Layers - stronger and darker for better contrast */}
+      <div className="fixed inset-0 bg-[radial-gradient(120%_90%_at_50%_-10%,#3b82f6_0%,#1d4ed8_26%,#0b1f48_56%,#020617_100%)] pointer-events-none z-0"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(100%_80%_at_50%_35%,transparent_0%,rgba(2,6,23,0.42)_58%,rgba(2,6,23,0.85)_100%)] pointer-events-none z-0"></div>
+      <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none z-0 mix-blend-soft-light"></div>
       
       <SystemBootPreloader onComplete={() => setIsLoading(false)} />
       <CustomCursor />

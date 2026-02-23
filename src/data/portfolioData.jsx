@@ -51,7 +51,7 @@ export const PROJECTS = [
     id: 1,
     title: "AI Resume / Interview Prep AI",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
+      "https://opengraph.githubassets.com/1/Pranjalraj0404/Interview-prep-ai",
     tech: ["Next.js", "Gemini API", "MongoDB", "Tailwind"],
     description:
       "AI-based interview platform generating adaptive questions for mock interviews. Reduces prep time using generative AI models.",
@@ -87,7 +87,7 @@ export const PROJECTS = [
     id: 3,
     title: "EquiSplit",
     image:
-      "https://github.com/Pranjalraj0404/EquiSplit/blob/main/Screenshots/dashboard.png",
+      "https://raw.githubusercontent.com/Pranjalraj0404/EquiSplit/main/Screenshots/dashboard.png",
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
     description:
       "Intelligent Group Expense Tracker - seamless expense splitting, automated debt settlement, and interactive analytics dashboard.",
@@ -119,7 +119,7 @@ export const SKILL_CATEGORIES = [
   },
   {
     title: "Frontend",
-    icon: <Globe className="w-5 h-5 text-purple-400" />,
+    icon: <Globe className="w-5 h-5 text-blue-400" />,
     skills: [
       { name: "React.js", icon: "react/react-original.svg" },
       { name: "Tailwind CSS", icon: "tailwindcss/tailwindcss-original.svg" },
