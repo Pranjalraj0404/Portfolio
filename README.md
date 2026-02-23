@@ -1,4 +1,4 @@
-# PR.DEV – Full Stack Developer Portfolio
+# Full Stack Developer Portfolio
 
 A modern, animated, and AI-powered **full-stack developer portfolio** built using React, Vite, Tailwind CSS, Supabase, EmailJS, and Gemini AI.
 
@@ -6,53 +6,49 @@ Showcases projects, skills, journey, and includes a live **AI assistant**, Supab
 
 ---
 
-## 🔗 Live Demo
-
-👉 **Hosted on Vercel:**  
+##  Live Demo
 
 https://portfolio-pranjalraj.vercel.app/
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
-Your screenshots are stored in the `public/` folder.
 
-### 🔹 Hero Section
+### - Hero Section
 ![Hero Section](public/main.png)
 
-### 🔹 Featured Projects
+### - Featured Projects
 ![Featured Projects](public/Project.png)
 
-### 🔹 Contact Modal
+### - Contact Modal
 ![Contact Modal](public/Connect.png)
 
-### 🔹 AI Chatbot
+### - AI Chatbot
 ![AI Chatbot](public/ChatBot.png)
 
 
-## ✨ Features
+## Features
 
-- 🎨 **Modern Glassmorphism UI**: High-end visuals with gradients, backdrop blur, custom cursor, and smooth scroll animations.
-- 🧑‍💻 **Interactive Hero Section**: Features glitch text effects, typewriter animations, and a dynamic layout.
-- 🧰 **Categorized Tech Stack**: Visual breakdown of skills (Languages, Frontend, Backend, Tools) with hover effects.
-- 💼 **Project Showcase**:
+-  **Modern Glassmorphism UI**: High-end visuals with gradients, backdrop blur, custom cursor, and smooth scroll animations.
+-  **Interactive Hero Section**: Features glitch text effects, typewriter animations, and a dynamic layout.
+-  **Categorized Tech Stack**: Visual breakdown of skills (Languages, Frontend, Backend, Tools) with hover effects.
+-  **Project Showcase**:
   - Detailed project cards with tech badges.
   - **AI "Explain Like I'm 5"**: Uses Google Gemini API to simplify technical descriptions instantly.
   - Direct links to GitHub and Live Demos.
-- 📂 **Supabase Storage**: Efficiently hosts profile images and resume files.
-- 📬 **Smart Contact System**:
+-  **Supabase Storage**: Efficiently hosts profile images and resume files.
+-  **Smart Contact System**:
   - Powered by EmailJS.
   - Sends inquiries directly to your inbox.
   - Auto-replies to senders with a confirmation message.
-- 🤖 **"Pranjal AI" Chatbot**: A custom-trained AI assistant that answers questions about the portfolio owner's skills and background.
-- 📱 **Fully Responsive**: Optimized for all devices, from mobile phones to large desktop screens.
-- ⚡ **High Performance**: Built with Vite for lightning-fast loading and HMR.
-- 🚀 **CI/CD Deployment**: Automated deployments to Vercel via GitHub.
+-  **"Pranjal AI" Chatbot**: A custom-trained AI assistant that answers questions about the portfolio owner's skills and background.
+-  **Fully Responsive**: Optimized for all devices, from mobile phones to large desktop screens.
+-  **High Performance**: Built with Vite for lightning-fast loading and HMR.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 **Frontend**  
 - React  
@@ -66,17 +62,17 @@ Your screenshots are stored in the `public/` folder.
 - Google Gemini API (AI Features)  
 
 **Deployment**  
-- Vercel  
+- Vercel
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 The project follows a modular architecture for better maintainability and scalability:
 
 ```bash
 my-portfolio/
-├── public/                 # Static assets (images, icons)
+├── public/
 │   ├── Hero Section.png
 │   ├── Featured Projects.png
 │   ├── Contact Modal .png
@@ -103,10 +99,11 @@ my-portfolio/
 ├── vite.config.js
 ├── tailwind.config.js
 └── postcss.config.js
+
 ```
 
 
-⚙️ Environment Variables
+Environment Variables
 
 Create a .env file in the project root:
 
@@ -124,71 +121,60 @@ VITE_GEMINI_API_KEY=your_gemini_api_key
 
 
 **Important**
+```
+1]All keys must start with VITE_ (Vite requirement).
+2].env is ignored by git (via .gitignore) → secrets are safe.
+3]Add the same keys in Vercel → Project → Settings → Environment Variables.
+```
 
-All keys must start with VITE_ (Vite requirement).
-
-.env is ignored by git (via .gitignore) → secrets are safe.
-
-Add the same keys in Vercel → Project → Settings → Environment Variables.
-
-🚀 Running Locally
-1️⃣ Clone the repo
+ Running Locally
+ 
+1) Clone the repo
 ```bash
 git clone https://github.com/Pranjalraj0404/Portfolio.git
 cd Portfolio
 ```
 
-2️⃣ Install dependencies
+2️)Install dependencies
 ```bash
 npm install
 ```
 
-3️⃣ Setup .env
+3️)Setup .env
 ```bash
 Create .env with the values shown above.
 ```
 
-4️⃣ Start dev server
+4️) Start dev server
 ```bash
 npm run dev
 ```
 
-Open: http://localhost:5173
+Open: http://localhost:3000
 
-5️⃣ Build & preview production build
+5️)Build & preview production build
 ```bash
 npm run build
 npm run preview
 
-
-Preview: usually http://localhost:4173
 ```
 
-🌐 Deploying to Vercel
-
-Push to GitHub (steps below).
+Deploying to Vercel & Push to GitHub (steps below).
 
 On Vercel Dashboard:
 ```bash
 Import Portfolio repo from GitHub
-
 Framework preset: Vite
-
 Build command: npm run build
-
 Output directory: dist
-
 Add all environment variables
-
-Click Deploy 🚀
-
+Click Deploy 
 Every push to main will auto-redeploy.
 ```
-🧾 Git & GitHub Workflow
 
-From inside your project folder (D:\Projects\gemin\my-portfolio):
+ Git & GitHub Workflow
+
 ```bash
-First time (already done, but for reference)
 git init
 git branch -M main
 git remote add origin https://github.com/Pranjalraj0404/Portfolio.git
@@ -197,53 +183,24 @@ git commit -m "Initial commit"
 git push -u origin main
 ```
 
-Next updates (like this README + screenshots)
+Go to Vercel and host, That’s it – Vercel will pick up the push and redeploy automatically.
 
-Whenever you change files (README, images, code):
-
-```bash
-# 1. See what changed
-git status
-
-# 2. Stage all changes
-git add .
-
-# 3. Commit with a message
-git commit -m "Add README and screenshots"
-
-# 4. Push to GitHub
-git push
-```
-
-That’s it – Vercel will pick up the push and redeploy automatically.
-
-🤝 Contributing / Reuse
+Contributing / Reuse
 
 You can:
-
+```
 Fork this repo
-
 Replace content with your own details
-
 Swap services (e.g., different AI provider or backend)
-
 Extend the AI assistant or add new sections
+```
 
-📜 License
-
-This project is open for personal portfolio use.
-Feel free to learn from it and build your own version.
-
-🙌 Credits
-
+Credits
+```
 Developer: Pranjal Raj
-
 Hosting: Vercel
-
 Icons: Lucide
-
 Devicons: cdn.jsdelivr.net/gh/devicons/devicon
-
 AI: Google Gemini
-
 Storage: Supabase
+```
