@@ -19,16 +19,16 @@ https://portfolio-pranjalraj.vercel.app/
 Your screenshots are stored in the `public/` folder.
 
 ### 🔹 Hero Section
-![Hero Section](./public/Hero%20Section.png)
+![Hero Section](public/main.png)
 
 ### 🔹 Featured Projects
-![Featured Projects](./public/Screenshot%202026-02-23%20182211%20.png)
+![Featured Projects](public/Project.png)
 
 ### 🔹 Contact Modal
-![Contact Modal](./public/Contact%20Modal%20%20.png)
+![Contact Modal](public/Connect.png)
 
 ### 🔹 AI Chatbot
-![AI Chatbot](./public/Screenshot%202026-02-23%20182227%20%20.png)
+![AI Chatbot](public/ChatBot.png)
 
 
 ## ✨ Features
